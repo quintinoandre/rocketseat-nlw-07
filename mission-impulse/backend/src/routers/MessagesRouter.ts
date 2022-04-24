@@ -3,8 +3,8 @@ import { Router } from 'express';
 import {
 	CreateMessageController,
 	GetLastThreeMessagesController,
-} from '../controllers';
-import { EnsureAuthenticatedMiddleware } from '../middlewares';
+} from '@controllers';
+import { EnsureAuthenticatedMiddleware } from '@middlewares';
 
 const MessagesRouter = Router();
 

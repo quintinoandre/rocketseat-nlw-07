@@ -12,7 +12,7 @@ import {
 	MessagesRouter,
 	ProfileRouter,
 	SignInRouter,
-} from './routers';
+} from '@routers';
 
 const app = express();
 

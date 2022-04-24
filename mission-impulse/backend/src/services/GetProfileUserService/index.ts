@@ -1,4 +1,4 @@
-import { prismaClient } from '../../prisma';
+import { prismaClient } from '@prisma';
 
 class GetProfileUserService {
 	async execute(user_id: string) {

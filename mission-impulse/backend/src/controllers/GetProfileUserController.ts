@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-import { GetProfileUserService } from '../services';
+import { GetProfileUserService } from '@services';
 
 class GetProfileUserController {
 	async handle({ user_id }: Request, response: Response) {

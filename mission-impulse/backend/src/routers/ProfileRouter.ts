@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
-import { GetProfileUserController } from '../controllers';
-import { EnsureAuthenticatedMiddleware } from '../middlewares';
+import { GetProfileUserController } from '@controllers';
+import { EnsureAuthenticatedMiddleware } from '@middlewares';
 
 const ProfileRouter = Router();
 

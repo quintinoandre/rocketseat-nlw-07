@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"target": "es2017",
+		"module": "commonjs",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": false,
+		"skipLibCheck": true,
+		"typeRoots": ["node_modules/@types", "src/@types"],
+		"baseUrl": ".",
+		"paths": {
+			"@prisma": ["src/prisma"],
+			"@controllers": ["src/controllers"],
+			"@middlewares": ["src/middlewares"],
+			"@routers": ["src/routers"],
+			"@services": ["src/services"]
+		}
+	}
+}

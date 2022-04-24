@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { sign } from 'jsonwebtoken';
 
-import { prismaClient } from '../../prisma';
+import { prismaClient } from '@prisma';
+
 import { IAccessTokenResponse, IUserResponse } from './types';
 
 class AuthenticateUserService {
