@@ -1,0 +1,40 @@
+{
+	"Basic React Native Component": {
+		"prefix": "rnbc",
+		"body": [
+			"import React from 'react';",
+			"import { View, Text } from 'react-native';",
+			"",
+			"import { styles } from './styles';",
+			"",
+			"function ${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/}() {",
+			"  return (",
+			"    <View style={styles.container}>",
+			"      <Text>${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/}</Text>",
+			"    </View>",
+			"  );",
+			"}",
+			"",
+			"export { ${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/} };",
+			"",
+		],
+		"description": "Create the structure of a react native component"
+	},
+
+	"StyleSheet React Native Object": {
+		"prefix": "rnso",
+		"body": [
+			"import { StyleSheet } from 'react-native';",
+			"",
+			"const styles = StyleSheet.create({",
+			"  container: {",
+			"    flex: 1,",
+			"  },",
+			"});",
+			"",
+			"export { styles };",
+			"",
+		],
+		"description": "Create a style object with Stylesheet to separate file."
+	}
+}

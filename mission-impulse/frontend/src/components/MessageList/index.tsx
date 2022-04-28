@@ -18,7 +18,7 @@ function MessageList() {
 	const [messages, setMessages] = useState<TMessage[]>([]);
 
 	useEffect(() => {
-		setInterval(() => {
+		const timer = setInterval(() => {
 			if (messagesQueue.length > 0) {
 				setMessages((prevState) =>
 					[messagesQueue[0], prevState[0], prevState[1]].filter(Boolean)
@@ -27,6 +27,8 @@ function MessageList() {
 				messagesQueue.shift();
 			}
 		}, 3000);
+
+		return () => clearInterval(timer);
 	}, []);
 
 	useEffect(() => {
@@ -41,7 +43,7 @@ function MessageList() {
 			<ul className={styles.messageList}>
 				{messages.map((message) => {
 					return (
-						<li key={message.id} className={styles.message}>
+						<li key={`${message.id}${message.text}`} className={styles.message}>
 							<p className={styles.messageContent}>{message.text}</p>
 							<div className={styles.messageUser}>
 								<div className={styles.userImage}>

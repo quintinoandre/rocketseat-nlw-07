@@ -1,0 +1,62 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"airbnb",
+		"prettier",
+		"plugin:prettier/recommended",
+		"plugin:react/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": [
+		"eslint-plugin-import-helpers",
+		"react",
+		"@typescript-eslint",
+		"prettier"
+	],
+	"rules": {
+		"prettier/prettier": "error",
+		"arrow-body-style": "off",
+		"prefer-arrow-callback": "off",
+		"react/jsx-filename-extension": "off",
+		"import/prefer-default-export": "off",
+		"import/extensions": "off",
+		"import/no-unresolved": "off",
+		"react/react-in-jsx-scope": "off",
+		"camelcase": "off",
+		"react/style-prop-object": "off",
+		"import/no-extraneous-dependencies": "off",
+		"react/jsx-props-no-spreading": "off",
+		"react/jsx-no-constructed-context-values": "off",
+		"no-console": "off",
+		"react/jsx-no-useless-fragment": "off",
+		"no-alert": "off",
+		"react/jsx-no-bind": "off",
+		"consistent-return": "off",
+		"import-helpers/order-imports": [
+			"warn",
+			{
+				"newlinesBetween": "always",
+				"groups": [
+					"module",
+					"/^@server/shared/",
+					"/^@/",
+					["parent", "sibling", "index"]
+				],
+				"alphabetize": {
+					"order": "asc",
+					"ignoreCase": true
+				}
+			}
+		]
+	}
+}
